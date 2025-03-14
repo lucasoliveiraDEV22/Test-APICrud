@@ -1,0 +1,15 @@
+@model ApiCrud.Entities.Cliente
+
+<h2>Adicionar Cliente</h2>
+
+<form method="post" action="/Cliente/Create">
+    <div class="form-group">
+        <label>Nome</label>
+        <input type="text" class="form-control" name="NmCliente" required>
+    </div>
+    <div class="form-group">
+        <label>Cidade</label>
+        <input type="text" class="form-control" name="Cidade" required>
+    </div>
+    <button type="submit" class="btn btn-success">Salvar</button>
+</form>

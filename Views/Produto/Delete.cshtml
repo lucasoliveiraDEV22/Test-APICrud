@@ -1,0 +1,10 @@
+@model ApiCrud.Entities.Produto
+
+<h2>Excluir Produto</h2>
+
+<p>Tem certeza que deseja excluir o produto <strong>@Model.DscProduto</strong>?</p>
+
+<form method="post" action="/Produto/Delete/@Model.IdProduto">
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a href="/Produto" class="btn btn-secondary">Cancelar</a>
+</form>

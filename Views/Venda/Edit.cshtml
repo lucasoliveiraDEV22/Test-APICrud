@@ -1,0 +1,24 @@
+@model ApiCrud.Entities.Venda
+
+<h2>Editar Venda</h2>
+
+<form method="post" action="/Venda/Edit/@Model.IdVenda">
+    <input type="hidden" name="IdVenda" value="@Model.IdVenda">
+
+    <div class="form-group">
+        <label>Cliente</label>
+        <input type="text" class="form-control" name="IdCliente" value="@Model.IdCliente" required>
+    </div>
+
+    <div class="form-group">
+        <label>Produto</label>
+        <input type="text" class="form-control" name="IdProduto" value="@Model.IdProduto" required>
+    </div>
+
+    <div class="form-group">
+        <label>Quantidade</label>
+        <input type="number" class="form-control" name="QtdVenda" value="@Model.QtdVenda" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>

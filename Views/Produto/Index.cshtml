@@ -1,0 +1,24 @@
+@model IEnumerable<ApiCrud.Entities.Produto>
+
+    <h2>Lista de Produtos</h2>
+
+    <p><a href="/Produto/Create" class="btn btn-primary">Adicionar Produto</a></p>
+
+    <table class="table">
+        <tr>
+            <th>Descrição</th>
+            <th>Valor Unitário</th>
+            <th>Ações</th>
+        </tr>
+        @foreach (var produto in Model)
+    {
+        <tr>
+            <td>@produto.DscProduto</td>
+            <td>@produto.VlrUnitario</td>
+            <td>
+                <a href="/Produto/Edit/@produto.IdProduto" class="btn btn-warning">Editar</a>
+                <a href="/Produto/Delete/@produto.IdProduto" class="btn btn-danger">Excluir</a>
+            </td>
+        </tr>
+    }
+    </table>

@@ -1,0 +1,28 @@
+@model IEnumerable<ApiCrud.Entities.Venda>
+
+    <h2>Lista de Vendas</h2>
+
+    <p><a href="/Venda/Create" class="btn btn-primary">Registrar Venda</a></p>
+
+    <table class="table">
+        <tr>
+            <th>Cliente</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Valor Total</th>
+            <th>Ações</th>
+        </tr>
+        @foreach (var venda in Model)
+    {
+        <tr>
+            <td>@venda.Cliente.NmCliente</td>
+            <td>@venda.Produto.DscProduto</td>
+            <td>@venda.QtdVenda</td>
+            <td>@venda.VlrTotalVenda</td>
+            <td>
+                <a href="/Venda/Edit/@venda.IdVenda" class="btn btn-warning">Editar</a>
+                <a href="/Venda/Delete/@venda.IdVenda" class="btn btn-danger">Excluir</a>
+            </td>
+        </tr>
+    }
+    </table>

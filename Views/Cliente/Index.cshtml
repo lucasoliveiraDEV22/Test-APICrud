@@ -1,0 +1,24 @@
+@model IEnumerable<ApiCrud.Entities.Cliente>
+
+    <h2>Lista de Clientes</h2>
+
+    <p><a href="/Cliente/Create" class="btn btn-primary">Adicionar Cliente</a></p>
+
+    <table class="table">
+        <tr>
+            <th>Nome</th>
+            <th>Cidade</th>
+            <th>Ações</th>
+        </tr>
+        @foreach (var cliente in Model)
+    {
+        <tr>
+            <td>@cliente.NmCliente</td>
+            <td>@cliente.Cidade</td>
+            <td>
+                <a href="/Cliente/Edit/@cliente.IdCliente" class="btn btn-warning">Editar</a>
+                <a href="/Cliente/Delete/@cliente.IdCliente" class="btn btn-danger">Excluir</a>
+            </td>
+        </tr>
+    }
+    </table>

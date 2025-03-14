@@ -1,0 +1,16 @@
+@model ApiCrud.Entities.Produto
+
+<h2>Editar Produto</h2>
+
+<form method="post" action="/Produto/Edit/@Model.IdProduto">
+    <input type="hidden" name="IdProduto" value="@Model.IdProduto">
+    <div class="form-group">
+        <label>Descrição</label>
+        <input type="text" class="form-control" name="DscProduto" value="@Model.DscProduto" required>
+    </div>
+    <div class="form-group">
+        <label>Valor Unitário</label>
+        <input type="number" class="form-control" name="VlrUnitario" value="@Model.VlrUnitario" step="0.01" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>

@@ -1,0 +1,10 @@
+@model ApiCrud.Entities.Venda
+
+<h2>Excluir Venda</h2>
+
+<p>Tem certeza que deseja excluir a venda de <strong>@Model.QtdVenda</strong> unidades do produto <strong>@Model.Produto.DscProduto</strong> para o cliente <strong>@Model.Cliente.NmCliente</strong>?</p>
+
+<form method="post" action="/Venda/Delete/@Model.IdVenda">
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a href="/Venda" class="btn btn-secondary">Cancelar</a>
+</form>
